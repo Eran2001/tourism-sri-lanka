@@ -9,7 +9,7 @@ export default function MainLayout() {
     <>
       <NavBar />
       <SecondaryNavBar />
-      <main className="min-h-screen xl:mx-80 lg:max-70 md:mx-40 sm:mx-30 max-sm:mx-10">
+      <main className="min-h-screen">
         <Outlet />
       </main>
       <Footer />

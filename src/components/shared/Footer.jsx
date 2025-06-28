@@ -6,7 +6,7 @@ import Icon from "../ui/Icon";
 export default function Footer() {
   return (
     <>
-      <footer className="min-h-[60vh] text-center flex flex-col items-center justify-between py-16">
+      <footer className="min-h-[60vh] text-center flex flex-col items-center justify-between py-16 xl:mt-[100px] max-xl:mt-[80px] max-md:mt-[650px] max-sm:mt-[800px]">
         <div className="max-w-[800px] text-center max-sm:w-[380px] sm:w-[500px] md:w-[800px]">
           <h5 className="text-[#5c3d2e] leading-none text-[3rem] max-sm:text-[2rem]">
             Drop us a line or two, we are open for creative minds and

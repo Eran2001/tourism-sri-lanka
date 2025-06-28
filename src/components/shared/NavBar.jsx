@@ -24,7 +24,7 @@ const NavBar = () => {
     <>
       <nav
         className={`py-[6px] flex justify-around items-center fixed top-0 w-full z-[10000] transition-colors duration-300 ${
-          isScrolled ? "bg-[#f9f5e3] text-[#5c3d2e]" : "bg-[#2c6e49] text-white"
+          isScrolled ? "bg-[#f9f5e3] text-[#5c3d2e]" : "bg-[#006D5B] text-white"
         }`}
       >
         <div>
