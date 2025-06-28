@@ -49,41 +49,89 @@ const SecondaryNavBar = () => {
         title="Tour Menu"
         width="w-80"
       >
-        <div className="flex flex-col space-y-4 text-black">
-          <Link to="/" onClick={() => setIsDrawerOpen(false)}>
+        <div className="flex flex-col space-y-4 max-lg:space-y-8 text-black">
+          <Link
+            to="/"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
             Home
           </Link>
-          <Link to="/client" onClick={() => setIsDrawerOpen(false)}>
+          <Link
+            to="/client"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
             Clients
           </Link>
-          <Link to="/payments" onClick={() => setIsDrawerOpen(false)}>
+          <Link
+            to="/payments"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
             Payments
           </Link>
-          <Link to="/contact" onClick={() => setIsDrawerOpen(false)}>
+          <Link
+            to="/contact"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
             Contact Us
           </Link>
-          <Link to="/about" onClick={() => setIsDrawerOpen(false)}>
+          <Link
+            to="/about"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
             About Us
           </Link>
-          <Link to="/services" onClick={() => setIsDrawerOpen(false)}>
+          <Link
+            to="/services"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
             Services
           </Link>
-          <a href="#gallery1" onClick={() => setIsDrawerOpen(false)}>
+          <a
+            href="#gallery1"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
             Tour Itineraries
           </a>
-          <a href="#gallery2" onClick={() => setIsDrawerOpen(false)}>
+          <a
+            href="#gallery2"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
             Hire Vehicles
           </a>
-          <a href="#gallery3" onClick={() => setIsDrawerOpen(false)}>
+          <a
+            href="#gallery3"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
             Day Tours
           </a>
-          <a href="#gallery4" onClick={() => setIsDrawerOpen(false)}>
+          <a
+            href="#gallery4"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
             Best things to do in Sri Lanka
           </a>
-          <a href="#gallery5" onClick={() => setIsDrawerOpen(false)}>
+          <a
+            href="#gallery5"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
             Attractions
           </a>
-          <a href="#gallery6" onClick={() => setIsDrawerOpen(false)}>
+          <a
+            href="#gallery6"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
             Recommended Stays
           </a>
         </div>
