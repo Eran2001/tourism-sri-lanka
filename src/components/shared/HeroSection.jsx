@@ -26,7 +26,7 @@ const HeroSection = () => {
               <Button
                 text="Book Now"
                 onClick={() => Notification.success("Hello")}
-                className="px-8 py-4 max-sm:px-6 max-sm:py-2 bg-[#006D5B]"
+                className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-8 bg-[#006D5B]"
               />
             </div>
 
