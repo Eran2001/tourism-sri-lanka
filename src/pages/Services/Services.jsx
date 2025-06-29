@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Loading from "@/components/ui/Loading";
+import Button from "@/components/ui/Button";
 
 const Services = () => {
+  const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     document.title = "Drive Lanka | Services";
     const timeout = setTimeout(() => {
@@ -12,93 +14,216 @@ const Services = () => {
 
     return () => clearTimeout(timeout);
   }, []);
-
   if (isLoading) return <Loading />;
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 text-[#5c3d2e] mt-27">
-      <div className="max-w-7xl mx-auto mt-10">
-        {/* Section Header */}
-        <h2 className="text-3xl font-bold text-[#5c3d2e] sm:text-4xl text-center mb-12">
-          Our Vehicle Categories
-        </h2>
+    <div className="min-h-screen bg-gray-100 pt-24 pb-16 mt-27">
+      <div className="container mx-auto px-4">
+        {/* Hero Section */}
+        <section className="text-center py-16 bg-[#f4d35e] rounded-lg">
+          <h1 className="text-5xl font-bold text-[#5c3d2e] mb-4">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            At Drive Lanka, we provide premium vehicle rental services tailored
+            to your needs. Whether you're exploring Sri Lanka or need reliable
+            transportation, our diverse fleet and flexible options ensure a
+            seamless experience.
+          </p>
+        </section>
 
-        {/* Category Block */}
-        {[
-          {
-            title: "Cars",
-            description:
-              "Fuel-efficient and comfortable options perfect for solo travelers or small families exploring the island.",
-            images: [
-              "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?cs=srgb&dl=pexels-mikebirdy-170811.jpg&fm=jpg",
-              "https://cdn.jdpower.com/Average%20Weight%20Of%20A%20Car.jpg",
-              "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/i20/Highlights/pc/i20_Modelpc.png",
-
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg/1200px-2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg",
-              "https://www.vdm.ford.com/content/dam/brand_ford/en_us/brand/electrification/desktop/2024-Mustang-06_43.jpg/jcr:content/renditions/cq5dam.web.768.768.jpeg",
-              "https://www.mbusa.com/content/dam/mb-nafta/us/myco/my24/amg-gt-class/2-door/all-vehicles/2024-AMG-GT55-COUPE-AVP-DR.png",
-            ],
-          },
-          {
-            title: "SUVs",
-            description:
-              "Spacious and versatile, ideal for groups and off-road adventures across Sri Lanka’s diverse terrain.",
-            images: [
-              "https://car-images.bauersecure.com/wp-images/2697/best-electric-cars-2025-renault-scenic-white-front-driving.jpg",
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSExUlWBZy1sjH6N4-ai4oZ2U7ycqhl8iKXrscI2x_OfDuGUc7pNw7j5UfQ2m8A2TpQJxM&usqp=CAU",
-              "https://www.usnews.com/cmsmedia/e4/66/c32525ba4ccdbddfcaa5aaf9eb18/2025ariyamain.jpg",
-              "https://auto.hindustantimes.com/htmobile1/nissan_xtrail/images/exterior_nissan-x-trail_front-left-side_600x400.jpg?imwidth=420",
-              "https://static.motorway.co.uk/static/assets_seller/hero-bmw-blue.b05b6c811a4915f7813d.png",
-              "https://img.autocarindia.com/ExtraImages/20241205062334_20240606032223_Creta%20showroom%20shot%20_1_.jpg",
-            ],
-          },
-          {
-            title: "Vans",
-            description:
-              "Large capacity vans suited for families, tours, and corporate transportation — comfort meets space.",
-            images: [
-              "https://deyotours.com/wp-content/uploads/2022/09/Big-Van.jpg",
-              "https://cdn-cmaji.nitrocdn.com/KIFZgOjkuClQKBjYuclpHfqgfzwfBwhH/assets/images/optimized/rev-f894972/mysltravel.com/wp-content/uploads/2022/08/download-8-1.jpg",
-              "https://m.atcdn.co.uk/ect/media/w600/257ab3687b2c4c0bbeda6df951f5fc65.jpg",
-              "https://www.explorervan.com/wp-content/uploads/2025/05/20250502_1140_Van-on-Highway-Sunrise_remix_01jt8tdqc8efza0cz0fcvn77qb-1024x683.png",
-              "https://5.imimg.com/data5/SELLER/Default/2022/9/FG/PL/LB/159526868/maruti-suzuki-ecco-van.jpg",
-              "https://www.casons.lk/thumbnailer.php?url=https://lrnawbodbhe5.objectstorage.uk-london-1.oci.customer-oci.com/p/wu2xha0pJLtGGKV3DjZMer1qsOsjrkKx5tWZK2krsza1dvQdDoOZvqNSQLjcG8sk/n/lrnawbodbhe5/b/ImageStorage/o/casons.lk/VehicleModelmodel/27/thumbnail.png",
-            ],
-          },
-          {
-            title: "Strong Vehicles",
-            description:
-              "Heavy-duty 4x4s and trucks built for tough roads, construction sites, or rural travel needs.",
-            images: [
-              "https://gst-contracts.s3.ap-southeast-1.amazonaws.com/uploads/bcc/cms/asset/avatar/324800/banner6.jpg",
-              "https://www.volvobuses.com/content/dam/volvo-buses/markets/global/classic/news/2020/1860x1050-9400-Intercity-coach-BS4-2020.jpg",
-              "https://gos3.ibcdn.com/img-1713444352.jpg",
-              "https://jcbl.com/jcbl-images/products/school-bus/school-bus-front-1.jpg",
-              "https://www.bus.com/wp-content/themes/redesign/assets/images/home/hero-800.webp",
-              "https://lesscarmorelife.com/wp-content/uploads/2023/03/img_6042-1.jpg?w=1024",
-            ],
-          },
-        ].map((category, index) => (
-          <div key={index} className="mb-34 shadow-2xl p-6">
-            <h3 className="text-3xl text-center font-semibold mb-2">
-              {category.title}
-            </h3>
-            <p className="text-lg mb-6 text-center">{category.description}</p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {category.images.map((img, i) => (
-                <div key={i} className="rounded-lg overflow-hidden shadow-md">
-                  <img
-                    src={img}
-                    alt={`${category.title} ${i + 1}`}
-                    className="w-full h-60 object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
+        {/* Services Overview */}
+        <section className="py-16">
+          <h2 className="text-3xl font-semibold text-[#5c3d2e] text-center mb-12">
+            What We Offer
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col justify-between h-full items-start">
+              <h3 className="text-2xl font-bold text-[#5c3d2e] mb-4">
+                Rent with Driver
+              </h3>
+              <p className="text-gray-600">
+                Enjoy a hassle-free journey with our professional drivers who
+                know Sri Lanka inside out. Perfect for tourists and business
+                travelers seeking comfort and convenience.
+              </p>
+              <Button
+                text="Learn More"
+                onClick={() => navigate("/with-driver")}
+                className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-8 "
+              />
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col justify-between h-full items-start">
+              <h3 className="text-2xl font-bold text-[#5c3d2e] mb-4">
+                Self Drive
+              </h3>
+              <p className="text-gray-600">
+                Take control of your adventure with our self-drive vehicles.
+                Choose from our wide range of cars, SUVs, and more for a
+                personalized driving experience.
+              </p>
+              <Button
+                text="Learn More"
+                onClick={() => navigate("/self-drive")}
+                className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-8 "
+              />
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col justify-between h-full items-start">
+              <h3 className="text-2xl font-bold text-[#5c3d2e] mb-4">
+                Corporate Rentals
+              </h3>
+              <p className="text-gray-600">
+                Tailored solutions for businesses, including long-term rentals
+                and fleet management. Reliable vehicles to keep your operations
+                running smoothly.
+              </p>
+              <Button
+                text="Contact Us"
+                onClick={() => navigate("/contact")}
+                className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-8 "
+              />
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col justify-between h-full items-start">
+              <h3 className="text-2xl font-bold text-[#5c3d2e] mb-4">
+                Event Transportation
+              </h3>
+              <p className="text-gray-600">
+                Whether it's a wedding, conference, or special gathering, we
+                offer stylish and punctual transportation solutions to ensure
+                your event runs smoothly and guests arrive in comfort.
+              </p>
+              <Button
+                text="Rent Now"
+                onClick={() => navigate("/contact")}
+                className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-8 "
+              />
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col justify-between h-full items-start">
+              <h3 className="text-2xl font-bold text-[#5c3d2e] mb-4">
+                Tour Packages
+              </h3>
+              <p className="text-gray-600">
+                Discover Sri Lanka with our curated tour packages. From cultural
+                sites to scenic beaches, we provide vehicles and guides for an
+                unforgettable experience.
+              </p>
+              <Button
+                text="Explore Tours"
+                onClick={() => navigate("/special-offers")}
+                className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-8 "
+              />
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col justify-between h-full items-start">
+              <h3 className="text-2xl font-bold text-[#5c3d2e] mb-4">
+                Special Events
+              </h3>
+              <p className="text-gray-600">
+                Make your events memorable with our luxury vehicles for
+                weddings, parties, and more. Customized transport solutions for
+                your special occasions.
+              </p>
+              <Button
+                text="Get a Quote"
+                onClick={() => navigate("/contact")}
+                className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-8 "
+              />
             </div>
           </div>
-        ))}
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-16 bg-[#5c3d2e] text-white rounded-lg">
+          <h2 className="text-3xl font-semibold text-center mb-12">
+            Why Choose Drive Lanka?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex items-start">
+              <div className="bg-[#f4d35e] text-[#5c3d2e] p-3 rounded-full mr-4">
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11l-4-4 1.4-1.4L10 9.2l3.6-3.6L15 7l-5 5z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">Quality Vehicles</h3>
+                <p>
+                  Our fleet is regularly maintained to ensure safety and
+                  comfort.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="bg-[#f4d35e] text-[#5c3d2e] p-3 rounded-full mr-4">
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11l-4-4 1.4-1.4L10 9.2l3.6-3.6L15 7l-5 5z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">Flexible Options</h3>
+                <p>
+                  Choose from self-drive or chauffeured services to suit your
+                  needs.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="bg-[#f4d35e] text-[#5c3d2e] p-3 rounded-full mr-4">
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11l-4-4 1.4-1.4L10 9.2l3.6-3.6L15 7l-5 5z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">24/7 Support</h3>
+                <p>Our team is available around the clock to assist you.</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="bg-[#f4d35e] text-[#5c3d2e] p-3 rounded-full mr-4">
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11l-4-4 1.4-1.4L10 9.2l3.6-3.6L15 7l-5 5z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">Competitive Pricing</h3>
+                <p>
+                  Transparent pricing with no hidden fees for all our services.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-16 text-center">
+          <h2 className="text-3xl font-semibold text-[#5c3d2e] mb-4">
+            Ready to Explore Sri Lanka?
+          </h2>
+          <p className="text-lg text-gray-600 mb-2">
+            Book your vehicle today and experience the freedom of the open road
+            with Drive Lanka.
+          </p>
+          <Button
+            text="Rent Now"
+            onClick={() => navigate("/rent-vehicles")}
+            className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-8 "
+          />
+        </section>
       </div>
-    </section>
+    </div>
   );
 };
 
