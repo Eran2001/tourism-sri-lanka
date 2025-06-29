@@ -112,14 +112,14 @@ const SecondaryNavBar = () => {
         isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
         title="Drive Lanka"
-        width="w-80"
+        width="w-70"
       >
-        <div className="flex flex-col space-y-4 max-lg:space-y-8 text-[#5c3d2e]">
+        <div className="flex flex-col space-y-1 max-lg:space-y-4 text-[#5c3d2e]">
           <NavLink
             to="/"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+              `px-4 py-4 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-[#5c3d2e] text-[#f4d35e]"
                   : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
@@ -132,7 +132,7 @@ const SecondaryNavBar = () => {
             to="/services"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+              `px-4 py-4 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-[#5c3d2e] text-[#f4d35e]"
                   : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
@@ -145,7 +145,7 @@ const SecondaryNavBar = () => {
             to="/clients"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+              `px-4 py-4 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-[#5c3d2e] text-[#f4d35e]"
                   : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
@@ -158,7 +158,7 @@ const SecondaryNavBar = () => {
             to="/blogs"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+              `px-4 py-4 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-[#5c3d2e] text-[#f4d35e]"
                   : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
@@ -171,7 +171,7 @@ const SecondaryNavBar = () => {
             to="/about"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+              `px-4 py-4 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-[#5c3d2e] text-[#f4d35e]"
                   : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
@@ -184,7 +184,7 @@ const SecondaryNavBar = () => {
             to="/contact"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+              `px-4 py-4 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-[#5c3d2e] text-[#f4d35e]"
                   : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
@@ -197,7 +197,7 @@ const SecondaryNavBar = () => {
             to="/fleet"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+              `px-4 py-4 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-[#5c3d2e] text-[#f4d35e]"
                   : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
@@ -210,7 +210,7 @@ const SecondaryNavBar = () => {
             to="/rent-vehicles"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+              `px-4 py-4 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-[#5c3d2e] text-[#f4d35e]"
                   : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
@@ -223,7 +223,7 @@ const SecondaryNavBar = () => {
             to="/with-driver"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+              `px-4 py-4 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-[#5c3d2e] text-[#f4d35e]"
                   : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
@@ -236,7 +236,7 @@ const SecondaryNavBar = () => {
             to="/self-drive"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+              `px-4 py-4 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-[#5c3d2e] text-[#f4d35e]"
                   : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
@@ -249,7 +249,7 @@ const SecondaryNavBar = () => {
             to="/faqs"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+              `px-4 py-4 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-[#5c3d2e] text-[#f4d35e]"
                   : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
@@ -262,7 +262,7 @@ const SecondaryNavBar = () => {
             to="/special-offers"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+              `px-4 py-4 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-[#5c3d2e] text-[#f4d35e]"
                   : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
