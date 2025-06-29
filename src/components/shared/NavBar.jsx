@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaPhone } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { FaFacebookF } from "react-icons/fa";
@@ -23,7 +23,7 @@ const NavBar = () => {
   return (
     <>
       <nav
-        className={`py-[6px] flex justify-around items-center fixed top-0 w-full z-[10000] transition-colors duration-300 ${
+        className={` flex justify-around items-center fixed top-0 w-full z-[10000] transition-colors duration-300 ${
           isScrolled ? "bg-[#f9f5e3] text-[#5c3d2e]" : "bg-[#006D5B] text-white"
         }`}
       >
@@ -32,36 +32,97 @@ const NavBar = () => {
             <li className="flex items-center space-x-2 max-sm:hidden">
               <FaPhone className="w-4 h-4" />
               <span className="text-sm">
-                Contact our support team : +94 (77) 123 4567
+                Contact our support team: +94 (77) 123 4567
               </span>
             </li>
-            <li className="flex items-center space-x-2 ">
-              <IoMail className="w-4 h-4 " />
+            <li className="flex items-center space-x-2">
+              <IoMail className="w-4 h-4" />
               <span className="text-sm">info@drivelanka.com</span>
             </li>
             <li className="cursor-pointer">
-              <FaFacebookF className="w-4 h-4" />
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookF className="w-4 h-4 hover:text-[#f4d35e] transition-colors duration-200" />
+              </a>
             </li>
             <li className="cursor-pointer">
-              <FaXTwitter className="w-4 h-4" />
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+                <FaXTwitter className="w-4 h-4 hover:text-[#f4d35e] transition-colors duration-200" />
+              </a>
             </li>
           </ul>
         </div>
         <div className="hidden xl:flex justify-center items-center gap-4">
-          <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/clients">Clients</Link>
-          <Link to="/blogs">Our BLog</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/contact">Contact Us</Link>
-          {/* <Link to="/payments">Payments</Link> */}
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                isActive ? "text-[#f4d35e] " : "hover:text-[#f4d35e]"
+              }`
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/services"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                isActive ? "text-[#f4d35e] " : "hover:text-[#f4d35e]"
+              }`
+            }
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="/clients"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                isActive ? "text-[#f4d35e] " : "hover:text-[#f4d35e]"
+              }`
+            }
+          >
+            Clients
+          </NavLink>
+          <NavLink
+            to="/blogs"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                isActive ? "text-[#f4d35e] " : "hover:text-[#f4d35e]"
+              }`
+            }
+          >
+            Our Blog
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                isActive ? "text-[#f4d35e] " : "hover:text-[#f4d35e]"
+              }`
+            }
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                isActive ? "text-[#f4d35e] " : "hover:text-[#f4d35e]"
+              }`
+            }
+          >
+            Contact Us
+          </NavLink>
         </div>
 
         {/* Mobile Hamburger Icon */}
         {/* <div className="xl:hidden flex justify-end p-4">
           <RxHamburgerMenu
             onClick={() => setIsDrawerOpen(true)}
-            className=" w-6 h-6 cursor-pointer"
+            className="w-6 h-6 cursor-pointer"
           />
         </div> */}
 
@@ -69,28 +130,88 @@ const NavBar = () => {
         <Drawer
           isOpen={isDrawerOpen}
           onClose={() => setIsDrawerOpen(false)}
-          title="Tourism"
+          title="Drive Lanka"
           width="w-80"
         >
-          <div className="flex flex-col space-y-4 text-black">
-            <Link to="/" onClick={() => setIsDrawerOpen(false)}>
+          <div className="flex flex-col space-y-4 text-[#5c3d2e]">
+            <NavLink
+              to="/"
+              onClick={() => setIsDrawerOpen(false)}
+              className={({ isActive }) =>
+                `px-4 py-1 rounded-md text-base font-medium transition-all duration-200 ${
+                  isActive
+                    ? "bg-[#f4d35e] text-[#5c3d2e] underline"
+                    : "hover:bg-[#f4d35e] hover:text-[#5c3d2e] hover:underline"
+                }`
+              }
+            >
               Home
-            </Link>
-            <Link to="/services" onClick={() => setIsDrawerOpen(false)}>
+            </NavLink>
+            <NavLink
+              to="/services"
+              onClick={() => setIsDrawerOpen(false)}
+              className={({ isActive }) =>
+                `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                  isActive
+                    ? "bg-[#f4d35e] text-[#5c3d2e] underline"
+                    : "hover:bg-[#f4d35e] hover:text-[#5c3d2e] hover:underline"
+                }`
+              }
+            >
               Services
-            </Link>
-            <Link to="/clients" onClick={() => setIsDrawerOpen(false)}>
+            </NavLink>
+            <NavLink
+              to="/clients"
+              onClick={() => setIsDrawerOpen(false)}
+              className={({ isActive }) =>
+                `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                  isActive
+                    ? "bg-[#f4d35e] text-[#5c3d2e] underline"
+                    : "hover:bg-[#f4d35e] hover:text-[#5c3d2e] hover:underline"
+                }`
+              }
+            >
               Clients
-            </Link>
-            <Link to="/blogs" onClick={() => setIsDrawerOpen(false)}>
+            </NavLink>
+            <NavLink
+              to="/blogs"
+              onClick={() => setIsDrawerOpen(false)}
+              className={({ isActive }) =>
+                `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                  isActive
+                    ? "bg-[#f4d35e] text-[#5c3d2e] underline"
+                    : "hover:bg-[#f4d35e] hover:text-[#5c3d2e] hover:underline"
+                }`
+              }
+            >
               Our Blog
-            </Link>
-            <Link to="/about" onClick={() => setIsDrawerOpen(false)}>
+            </NavLink>
+            <NavLink
+              to="/about"
+              onClick={() => setIsDrawerOpen(false)}
+              className={({ isActive }) =>
+                `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                  isActive
+                    ? "bg-[#f4d35e] text-[#5c3d2e] underline"
+                    : "hover:bg-[#f4d35e] hover:text-[#5c3d2e] hover:underline"
+                }`
+              }
+            >
               About Us
-            </Link>
-            <Link to="/contact" onClick={() => setIsDrawerOpen(false)}>
+            </NavLink>
+            <NavLink
+              to="/contact"
+              onClick={() => setIsDrawerOpen(false)}
+              className={({ isActive }) =>
+                `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                  isActive
+                    ? "bg-[#f4d35e] text-[#5c3d2e] underline"
+                    : "hover:bg-[#f4d35e] hover:text-[#5c3d2e] hover:underline"
+                }`
+              }
+            >
               Contact Us
-            </Link>
+            </NavLink>
           </div>
         </Drawer>
       </nav>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Drawer from "../ui/Drawer";
 
@@ -8,32 +8,94 @@ const SecondaryNavBar = () => {
 
   return (
     <>
-      <nav className="w-full fixed z-[10000] top-8 bg-[#f4d35e] flex justify-between items-center px-6 py-6">
-        <Link to="/" className="text-[#5c3d2e] font-bold text-xl">
+      <nav className="w-full fixed z-[10000] top-9 max-xl:top-5 bg-[#f4d35e] flex justify-between items-center px-6 py-6">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `text-[#5c3d2e] font-bold text-xl ${
+              isActive
+                ? ""
+                : " hover:text-[#5c3d2e] transition-all duration-200"
+            }`
+          }
+        >
           Drive Lanka
-        </Link>
+        </NavLink>
 
         {/* Desktop Links */}
         <ul className="flex max-xl:hidden gap-4">
-          <Link to="fleet" className="text-[#5c3d2e]">
+          <NavLink
+            to="/fleet"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-md text-sm font-medium text-[#5c3d2e] transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
+          >
             Our Fleet
-          </Link>
-          <Link to="rent-vehicles" className="text-[#5c3d2e]">
+          </NavLink>
+          <NavLink
+            to="/rent-vehicles"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-md text-sm font-medium text-[#5c3d2e] transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
+          >
             Rent Vehicles
-          </Link>
-
-          <Link to="with-driver" className="text-[#5c3d2e]">
+          </NavLink>
+          <NavLink
+            to="/with-driver"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-md text-sm font-medium text-[#5c3d2e] transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
+          >
             Rent with Driver
-          </Link>
-          <Link to="self-drive" className="text-[#5c3d2e]">
+          </NavLink>
+          <NavLink
+            to="/self-drive"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-md text-sm font-medium text-[#5c3d2e] transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
+          >
             Self Drive
-          </Link>
-          <Link to="faqs" className="text-[#5c3d2e]">
+          </NavLink>
+          <NavLink
+            to="/faqs"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-md text-sm font-medium text-[#5c3d2e] transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
+          >
             FAQs
-          </Link>
-          <Link to="special-offers" className="text-[#5c3d2e]">
+          </NavLink>
+          <NavLink
+            to="/special-offers"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded-md text-sm font-medium text-[#5c3d2e] transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
+          >
             Special Offers
-          </Link>
+          </NavLink>
         </ul>
 
         {/* Mobile Hamburger */}
@@ -49,95 +111,166 @@ const SecondaryNavBar = () => {
       <Drawer
         isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
-        title="Tour Menu"
+        title="Drive Lanka"
         width="w-80"
       >
-        <div className="flex flex-col space-y-4 max-lg:space-y-8 text-black">
-          <Link
+        <div className="flex flex-col space-y-4 max-lg:space-y-8 text-[#5c3d2e]">
+          <NavLink
             to="/"
-            className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/services"
-            className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
           >
             Services
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/clients"
-            className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
           >
             Clients
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/blogs"
-            className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
           >
             Our Blog
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/about"
-            className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
           >
             About Us
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/contact"
-            className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
           >
             Contact Us
-          </Link>
-
-          <Link
-            to="fleet"
-            className="border-b pb-2"
+          </NavLink>
+          <NavLink
+            to="/fleet"
             onClick={() => setIsDrawerOpen(false)}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
           >
             Our Fleet
-          </Link>
-          <Link
-            to="rent-vehicles"
-            className="border-b pb-2"
+          </NavLink>
+          <NavLink
+            to="/rent-vehicles"
             onClick={() => setIsDrawerOpen(false)}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
           >
             Rent Vehicles
-          </Link>
-          <Link
-            to="with-driver"
-            className="border-b pb-2"
+          </NavLink>
+          <NavLink
+            to="/with-driver"
             onClick={() => setIsDrawerOpen(false)}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
           >
             Rent with Driver
-          </Link>
-          <Link
-            to="self-drive"
-            className="border-b pb-2"
+          </NavLink>
+          <NavLink
+            to="/self-drive"
             onClick={() => setIsDrawerOpen(false)}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
           >
             Self Drive
-          </Link>
-          <Link
-            to="faqs"
-            className="border-b pb-2"
+          </NavLink>
+          <NavLink
+            to="/faqs"
             onClick={() => setIsDrawerOpen(false)}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
           >
             FAQs
-          </Link>
-          <Link
-            to="special-offers"
-            className="border-b pb-2"
+          </NavLink>
+          <NavLink
+            to="/special-offers"
             onClick={() => setIsDrawerOpen(false)}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                isActive
+                  ? "bg-[#5c3d2e] text-[#f4d35e]"
+                  : "hover:bg-[#5c3d2e] hover:text-[#f4d35e]"
+              }`
+            }
           >
             Special Offers
-          </Link>
+          </NavLink>
         </div>
       </Drawer>
     </>
