@@ -1,11 +1,11 @@
 import React from "react";
 
-const DayTour = () => {
+const AirportTransfer = () => {
   return (
     <div className="h-screen flex justify-center items-center text-8xl">
-      Day Tour
+      Airport Transfer
     </div>
   );
 };
 
-export default DayTour;
+export default AirportTransfer;

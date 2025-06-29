@@ -1,11 +1,11 @@
 import React from "react";
 
-const BestThings = () => {
+const SelfDrive = () => {
   return (
     <div className="h-screen flex justify-center items-center text-8xl">
-      Best Things
+      Self Drive
     </div>
   );
 };
 
-export default BestThings;
+export default SelfDrive;

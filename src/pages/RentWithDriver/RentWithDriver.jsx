@@ -1,11 +1,11 @@
 import React from "react";
 
-const Attractions = () => {
+const RentWithDriver = () => {
   return (
     <div className="h-screen flex justify-center items-center text-8xl">
-      Attractions
+      Rent With Driver
     </div>
   );
 };
 
-export default Attractions;
+export default RentWithDriver;

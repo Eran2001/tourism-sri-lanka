@@ -49,12 +49,12 @@ const NavBar = () => {
         </div>
         <div className="hidden xl:flex justify-center items-center gap-4">
           <Link to="/">Home</Link>
-          <Link to="/clients">Clients</Link>
-          <Link to="/payments">Payments</Link>
-          <Link to="/blogs">Our BLog</Link>
-          <Link to="/contact">Contact Us</Link>
-          <Link to="/about">About Us</Link>
           <Link to="/services">Services</Link>
+          <Link to="/clients">Clients</Link>
+          <Link to="/blogs">Our BLog</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/contact">Contact Us</Link>
+          <Link to="/payments">Payments</Link>
         </div>
 
         {/* Mobile Hamburger Icon */}

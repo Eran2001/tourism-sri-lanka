@@ -14,29 +14,29 @@ const SecondaryNavBar = () => {
         </Link>
 
         {/* Desktop Links */}
-        <ul className="hidden lg:flex gap-4">
+        <ul className="flex max-xl:hidden gap-4">
           <Link to="tour-itineraries" className="text-[#5c3d2e]">
             Tour Itineraries
           </Link>
           <Link to="hire-vehicles" className="text-[#5c3d2e]">
             Hire Vehicles
           </Link>
-          <Link to="day-tours" className="text-[#5c3d2e]">
-            Day Tours
+          <Link to="airport-transfer" className="text-[#5c3d2e]">
+            Airport Transfer
           </Link>
-          <Link to="best-things-to-do-in-sri-lanka" className="text-[#5c3d2e]">
-            Best things to do in Sri Lanka
+          <Link to="with-driver" className="text-[#5c3d2e]">
+            Rent with Driver
           </Link>
-          <Link to="attractions" className="text-[#5c3d2e]">
-            Attractions
+          <Link to="self-drive" className="text-[#5c3d2e]">
+            Self Drive
           </Link>
-          <Link to="recommended-stays" className="text-[#5c3d2e]">
-            Recommended Stays
+          <Link to="special-offers" className="text-[#5c3d2e]">
+            Special Offers
           </Link>
         </ul>
 
         {/* Mobile Hamburger */}
-        <div className="lg:hidden">
+        <div className="xl:hidden">
           <RxHamburgerMenu
             className="text-[#5c3d2e] w-6 h-6 cursor-pointer"
             onClick={() => setIsDrawerOpen(true)}

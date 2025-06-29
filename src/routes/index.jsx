@@ -16,10 +16,14 @@ const Blogs = lazy(() => import("@/pages/Blogs/Blogs"));
 const Services = lazy(() => import("@/pages/Services/Services"));
 const TourInit = lazy(() => import("@/pages/Tour-Init/TourInit"));
 const HireVehicles = lazy(() => import("@/pages/Hire-Vehicles/HireVehicles"));
-const DayTour = lazy(() => import("@/pages/Day-Tour/DayTour"));
-const BestThings = lazy(() => import("@/pages/Best-Things/BestThings"));
-const Attractions = lazy(() => import("@/pages/Attractions/Attractions"));
-const Recommended = lazy(() => import("@/pages/Recommended/Recommended"));
+const AirportTransfer = lazy(() =>
+  import("@/pages/AirportTransfer/AirportTransfer")
+);
+const RentWithDriver = lazy(() =>
+  import("@/pages/RentWithDriver/RentWithDriver")
+);
+const SelfDrive = lazy(() => import("@/pages/SelfDrive/SelfDrive"));
+const SpecialOffers = lazy(() => import("@/pages/SpecialOffers/SpecialOffers"));
 
 export const router = createBrowserRouter([
   {
@@ -37,10 +41,10 @@ export const router = createBrowserRouter([
       { path: "services", element: <Services /> },
       { path: "tour-itineraries", element: <TourInit /> },
       { path: "hire-vehicles", element: <HireVehicles /> },
-      { path: "day-tours", element: <DayTour /> },
-      { path: "best-things-to-do-in-sri-lanka", element: <BestThings /> },
-      { path: "attractions", element: <Attractions /> },
-      { path: "recommended-stays", element: <Recommended /> },
+      { path: "airport-transfer", element: <AirportTransfer /> },
+      { path: "with-driver", element: <RentWithDriver /> },
+      { path: "self-drive", element: <SelfDrive /> },
+      { path: "special-offers", element: <SpecialOffers /> },
 
       { path: "destinations", element: <Destinations /> },
       { path: "get-started", element: <GetStarted /> },
