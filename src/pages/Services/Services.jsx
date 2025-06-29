@@ -136,7 +136,7 @@ const Services = () => {
             Why Choose Drive Lanka?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="flex items-start">
+            <div className="flex items-start max-lg:flex-col max-lg:items-center max-lg:gap-4">
               <div className="bg-[#f4d35e] text-[#5c3d2e] p-3 rounded-full mr-4">
                 <svg
                   className="w-6 h-6"
@@ -146,15 +146,15 @@ const Services = () => {
                   <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11l-4-4 1.4-1.4L10 9.2l3.6-3.6L15 7l-5 5z" />
                 </svg>
               </div>
-              <div>
+              <div className="max-lg:text-center max-lg:w-80">
                 <h3 className="text-xl font-bold">Quality Vehicles</h3>
-                <p>
+                <p className="max-lg:text-sm">
                   Our fleet is regularly maintained to ensure safety and
                   comfort.
                 </p>
               </div>
             </div>
-            <div className="flex items-start">
+            <div className="flex items-start max-lg:flex-col max-lg:items-center max-lg:gap-4">
               <div className="bg-[#f4d35e] text-[#5c3d2e] p-3 rounded-full mr-4">
                 <svg
                   className="w-6 h-6"
@@ -164,15 +164,15 @@ const Services = () => {
                   <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11l-4-4 1.4-1.4L10 9.2l3.6-3.6L15 7l-5 5z" />
                 </svg>
               </div>
-              <div>
+              <div className="max-lg:text-center max-lg:w-80">
                 <h3 className="text-xl font-bold">Flexible Options</h3>
-                <p>
+                <p className="max-lg:text-sm">
                   Choose from self-drive or chauffeured services to suit your
                   needs.
                 </p>
               </div>
             </div>
-            <div className="flex items-start">
+            <div className="flex items-start max-lg:flex-col max-lg:items-center max-lg:gap-4">
               <div className="bg-[#f4d35e] text-[#5c3d2e] p-3 rounded-full mr-4">
                 <svg
                   className="w-6 h-6"
@@ -182,12 +182,14 @@ const Services = () => {
                   <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11l-4-4 1.4-1.4L10 9.2l3.6-3.6L15 7l-5 5z" />
                 </svg>
               </div>
-              <div>
+              <div className="max-lg:text-center max-lg:w-80">
                 <h3 className="text-xl font-bold">24/7 Support</h3>
-                <p>Our team is available around the clock to assist you.</p>
+                <p className="max-lg:text-sm">
+                  Our team is available around the clock to assist you.
+                </p>
               </div>
             </div>
-            <div className="flex items-start">
+            <div className="flex items-start max-lg:flex-col max-lg:items-center max-lg:gap-4">
               <div className="bg-[#f4d35e] text-[#5c3d2e] p-3 rounded-full mr-4">
                 <svg
                   className="w-6 h-6"
@@ -197,9 +199,9 @@ const Services = () => {
                   <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11l-4-4 1.4-1.4L10 9.2l3.6-3.6L15 7l-5 5z" />
                 </svg>
               </div>
-              <div>
+              <div className="max-lg:text-center max-lg:w-80">
                 <h3 className="text-xl font-bold">Competitive Pricing</h3>
-                <p>
+                <p className="max-lg:text-sm">
                   Transparent pricing with no hidden fees for all our services.
                 </p>
               </div>
