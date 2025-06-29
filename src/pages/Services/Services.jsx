@@ -19,11 +19,23 @@ const Services = () => {
     <div className="min-h-screen bg-gray-100 pt-24 pb-16 mt-27">
       <div className="container mx-auto px-4">
         {/* Hero Section */}
-        <section className="text-center py-16 bg-[#f4d35e] rounded-lg">
+        {/* <section className="text-center py-16 bg-[#f4d35e] rounded-lg">
           <h1 className="text-5xl font-bold text-[#5c3d2e] mb-4">
             Our Services
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            At Drive Lanka, we provide premium vehicle rental services tailored
+            to your needs. Whether you're exploring Sri Lanka or need reliable
+            transportation, our diverse fleet and flexible options ensure a
+            seamless experience.
+          </p>
+        </section> */}
+
+        <section className="text-center py-16 bg-[#f4d35e] rounded-lg">
+          <h2 className="text-3xl font-semibold text-[#5c3d2e] mb-4">
+            Our Services
+          </h2>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             At Drive Lanka, we provide premium vehicle rental services tailored
             to your needs. Whether you're exploring Sri Lanka or need reliable
             transportation, our diverse fleet and flexible options ensure a

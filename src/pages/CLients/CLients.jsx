@@ -48,14 +48,37 @@ export default function Clients() {
   return (
     <section className="py-16 bg-white sm:py-20 lg:py-24 mt-27">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto text-center">
+        {/* <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#5c3d2e] sm:text-4xl">
             What Our Clients Say
           </h2>
           <p className="mt-4 text-base text-[#5c3d2e]">
             Hear from our happy customers about their rental experience with us.
           </p>
-        </div>
+        </div> */}
+
+        {/* <section className="text-center py-16 bg-[#f4d35e] rounded-lg mb-12">
+          <h1 className="text-4xl sm:text-5xl font-bold text-[#5c3d2e] mb-4">
+            What Our Clients Say
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
+            Hear from our happy customers about their rental experience with us.
+          </p>
+        </section> */}
+
+        <section className="text-center py-16 bg-[#f4d35e] rounded-lg">
+          <h2 className="text-3xl font-semibold text-[#5c3d2e] mb-4">
+            What Our Clients Say
+          </h2>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            Hear from our happy customers about their rental experience with us.
+            From seamless booking processes to top-notch customer service, our
+            clients consistently praise the reliability, affordability, and
+            comfort we provide. Whether it's a short getaway or a long-term
+            rental, we go the extra mile to ensure your journey is smooth and
+            memorable.
+          </p>
+        </section>
 
         <div className="mt-16 space-y-24">
           {clients.map((client, index) => (

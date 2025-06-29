@@ -148,7 +148,7 @@ export default function Blogs() {
     <>
       <section className="py-12 bg-white sm:py-16 lg:py-20 mt-27">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="max-w-md mx-auto text-center">
+          {/* <div className="max-w-md mx-auto text-center">
             <h2 className="text-3xl font-bold text-[#5c3d2e] sm:text-4xl ">
               Read our blog
             </h2>
@@ -156,7 +156,30 @@ export default function Blogs() {
               With lots of unique blocks, you can easily build a page without
               coding. Build your next landing page.
             </p>
-          </div>
+          </div> */}
+
+          {/* <section className="text-center py-16 bg-[#f4d35e] rounded-lg mb-12">
+            <h1 className="text-4xl sm:text-5xl font-bold text-[#5c3d2e] mb-4">
+              Read our blog
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
+              With lots of unique blocks, you can easily build a page without
+              coding. Build your next landing page.
+            </p>
+          </section> */}
+
+          <section className="text-center py-16 bg-[#f4d35e] rounded-lg">
+            <h2 className="text-3xl font-semibold text-[#5c3d2e] mb-4">
+              Read our blog
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              Discover helpful tips, industry insights, and the latest updates
+              on travel, rentals, and more. Our blog is packed with valuable
+              information designed to inspire and guide you—whether you're
+              planning your next trip, exploring lifestyle ideas, or looking for
+              expert advice. No coding needed—just scroll, read, and enjoy!
+            </p>
+          </section>
 
           <div className="grid max-w-6xl grid-cols-1 mx-auto mt-8 text-center sm:mt-16 sm:text-left sm:grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-10">
             {blogs.map((blog, index) => (

@@ -39,10 +39,10 @@ const NavBar = () => {
               <IoMail className="w-4 h-4 " />
               <span className="text-sm">info@drivelanka.com</span>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <FaFacebookF className="w-4 h-4" />
             </li>
-            <li>
+            <li className="cursor-pointer">
               <FaXTwitter className="w-4 h-4" />
             </li>
           </ul>
