@@ -13,24 +13,24 @@ const SecondaryNavBar = () => {
 
         {/* Desktop Links */}
         <ul className="hidden lg:flex gap-4">
-          <a href="#gallery1" className="text-[#5c3d2e]">
+          <Link to="tour-itineraries" className="text-[#5c3d2e]">
             Tour Itineraries
-          </a>
-          <a href="#gallery2" className="text-[#5c3d2e]">
+          </Link>
+          <Link to="hire-vehicles" className="text-[#5c3d2e]">
             Hire Vehicles
-          </a>
-          <a href="#gallery3" className="text-[#5c3d2e]">
+          </Link>
+          <Link to="day-tours" className="text-[#5c3d2e]">
             Day Tours
-          </a>
-          <a href="#gallery4" className="text-[#5c3d2e]">
+          </Link>
+          <Link to="best-things-to-do-in-sri-lanka" className="text-[#5c3d2e]">
             Best things to do in Sri Lanka
-          </a>
-          <a href="#gallery5" className="text-[#5c3d2e]">
+          </Link>
+          <Link to="attractions" className="text-[#5c3d2e]">
             Attractions
-          </a>
-          <a href="#gallery6" className="text-[#5c3d2e]">
+          </Link>
+          <Link to="recommended-stays" className="text-[#5c3d2e]">
             Recommended Stays
-          </a>
+          </Link>
         </ul>
 
         {/* Mobile Hamburger */}
@@ -58,7 +58,7 @@ const SecondaryNavBar = () => {
             Home
           </Link>
           <Link
-            to="/client"
+            to="/clients"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
