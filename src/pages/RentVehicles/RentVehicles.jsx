@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 
-const HireVehicles = () => {
+const RentVehicles = () => {
   useEffect(() => {
-    document.title = "Drive Lanka | Hire Vehicles";
+    document.title = "Drive Lanka | Rent Vehicles";
   }, []);
   return (
     <div className="h-screen flex justify-center items-center text-8xl">
-      Hire Vehicles
+      Rent Vehicles
     </div>
   );
 };
 
-export default HireVehicles;
+export default RentVehicles;

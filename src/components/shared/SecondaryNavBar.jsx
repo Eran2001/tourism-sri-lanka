@@ -18,8 +18,8 @@ const SecondaryNavBar = () => {
           <Link to="fleet" className="text-[#5c3d2e]">
             Our Fleet
           </Link>
-          <Link to="hire-vehicles" className="text-[#5c3d2e]">
-            Hire Vehicles
+          <Link to="rent-vehicles" className="text-[#5c3d2e]">
+            Rent Vehicles
           </Link>
 
           <Link to="with-driver" className="text-[#5c3d2e]">
@@ -104,11 +104,11 @@ const SecondaryNavBar = () => {
             Our Fleet
           </Link>
           <Link
-            to="hire-vehicles"
+            to="rent-vehicles"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
-            Hire Vehicles
+            Rent Vehicles
           </Link>
           <Link
             to="with-driver"

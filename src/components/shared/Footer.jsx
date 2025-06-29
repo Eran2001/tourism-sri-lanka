@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../ui/Button";
 import Notification from "../ui/Notification";
 import Icon from "../ui/Icon";
 
 export default function Footer() {
+  const navigate = useNavigate();
   return (
     <section className="py-10 bg-[#f4d35e] sm:pt-16 lg:pt-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -15,8 +16,8 @@ export default function Footer() {
           </h5>
           <div className="mt-6">
             <Button
-              text="Get Started"
-              onClick={() => Notification.success("Hello")}
+              text="Rent Now"
+              onClick={() => navigate("/rent-vehicles")}
               className="px-8 py-4 max-sm:px-6 max-sm:py-2 bg-[#f9f5e3] ring-2 ring-offset-2 ring-[#5c3d2e]"
             />
           </div>

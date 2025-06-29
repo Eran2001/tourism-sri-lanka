@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { FaCar } from "react-icons/fa";
 
 import Button from "@/components/ui/Button";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative h-[200vh] w-full">
       {/* Main Hero Section - First Part */}
@@ -25,7 +28,7 @@ const HeroSection = () => {
               </p>
               <Button
                 text="Rent Now"
-                onClick={() => Notification.success("Hello")}
+                onClick={() => navigate("/rent-vehicles")}
                 className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-8 bg-[#006D5B]"
               />
             </div>
@@ -157,7 +160,7 @@ const HeroSection = () => {
             </p>
             <Button
               text="Rent a Vehicle"
-              onClick={() => Notification.success("Hello")}
+              onClick={() => navigate("/rent-vehicles")}
               className="px-8 py-4 max-sm:px-6 max-sm:py-2 bg-[#006D5B]"
             />
           </div>

@@ -1,7 +1,9 @@
 import React from "react";
 import Button from "../../components/ui/Button";
+import { useNavigate } from "react-router-dom";
 
 const CustomerFeedback = () => {
+  const navigate = useNavigate();
   return (
     <section className="py-12 bg-[#f9f5e3] sm:py-16 lg:py-20">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -19,6 +21,7 @@ const CustomerFeedback = () => {
           <div className="mt-8 text-center md:mt-16 md:order-3">
             <Button
               text="Check all reviews"
+              onClick={() => navigate("/clients")}
               className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-8 bg-[#006D5B]"
             />
           </div>

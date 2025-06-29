@@ -15,7 +15,7 @@ const Payments = lazy(() => import("@/pages/Payments/Payments"));
 const Blogs = lazy(() => import("@/pages/Blogs/Blogs"));
 const Services = lazy(() => import("@/pages/Services/Services"));
 const OurFleet = lazy(() => import("@/pages/OurFleet/OurFleet"));
-const HireVehicles = lazy(() => import("@/pages/Hire-Vehicles/HireVehicles"));
+const RentVehicles = lazy(() => import("@/pages/RentVehicles/RentVehicles"));
 const FAQ = lazy(() => import("@/pages/FAQ/FAQ"));
 const RentWithDriver = lazy(() =>
   import("@/pages/RentWithDriver/RentWithDriver")
@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "services", element: <Services /> },
       { path: "fleet", element: <OurFleet /> },
-      { path: "hire-vehicles", element: <HireVehicles /> },
+      { path: "rent-vehicles", element: <RentVehicles /> },
       { path: "faqs", element: <FAQ /> },
       { path: "with-driver", element: <RentWithDriver /> },
       { path: "self-drive", element: <SelfDrive /> },
