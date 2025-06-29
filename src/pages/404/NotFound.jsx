@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 import Button from "@/components/ui/Button";
 
 export default function NotFound() {
   const navigate = useNavigate();
+  useEffect(() => {
+    document.title = "404 Not Found";
+  }, []);
 
   return (
     <main className="grid min-h-screen place-items-center bg-[#f9f5e3] px-6 py-24 sm:py-32 lg:px-8">

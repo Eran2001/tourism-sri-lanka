@@ -36,6 +36,7 @@ export default function Clients() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Drive Lanka | Clients";
     const timeout = setTimeout(() => {
       setIsLoading(false);
     }, 200);

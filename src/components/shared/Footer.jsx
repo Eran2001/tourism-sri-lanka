@@ -24,12 +24,10 @@ export default function Footer() {
 
         <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
           <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-            <img
-              className="w-auto h-9"
-              src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg"
-              alt="Logo"
-            />
-            <p className="text-base leading-relaxed text-gray-600 mt-7">
+            <Link to="/">
+              <p className="text-[#5c3d2e] font-bold text-xl">Drive Lanka</p>
+            </Link>
+            <p className="text-base leading-relaxed text-[#006D5B] mt-7">
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
             </p>
@@ -41,7 +39,7 @@ export default function Footer() {
                   icon="facebook"
                   type="social"
                   size="w-5 h-5"
-                  className="text-blue-600"
+                  className="text-blue-600 cursor-pointer"
                 />
               </li>
               <li>
@@ -49,7 +47,7 @@ export default function Footer() {
                   icon="twitter"
                   type="social"
                   size="w-5 h-5"
-                  className="text-blue-400"
+                  className="text-blue-400 cursor-pointer"
                 />
               </li>
               <li>
@@ -57,7 +55,7 @@ export default function Footer() {
                   icon="instagram"
                   type="social"
                   size="w-5 h-5"
-                  className="text-pink-600"
+                  className="text-pink-600 cursor-pointer"
                 />
               </li>
               <li>
@@ -65,7 +63,7 @@ export default function Footer() {
                   icon="linkedin"
                   type="social"
                   size="w-5 h-5"
-                  className="text-blue-700"
+                  className="text-blue-700 cursor-pointer"
                 />
               </li>
             </ul>
@@ -79,34 +77,35 @@ export default function Footer() {
             <ul className="mt-6 space-y-4">
               <li>
                 <Link
-                  to="/about"
-                  className="text-base text-black hover:text-blue-600"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/services"
-                  className="text-base text-black hover:text-blue-600"
+                  className="text-base text-black hover:text-[#006D5B]"
                 >
                   Services
                 </Link>
               </li>
               <li>
                 <Link
+                  to="/about"
+                  className="text-base text-black hover:text-[#006D5B]"
+                >
+                  About Us
+                </Link>
+              </li>
+
+              <li>
+                <Link
                   to="/contact"
-                  className="text-base text-black hover:text-blue-600"
+                  className="text-base text-black hover:text-[#006D5B]"
                 >
                   Contact Us
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/gallery"
-                  className="text-base text-black hover:text-blue-600"
+                  to="/hire-vehicles"
+                  className="text-base text-black hover:text-[#006D5B]"
                 >
-                  Gallery
+                  Hire Vehicles
                 </Link>
               </li>
             </ul>
@@ -119,33 +118,34 @@ export default function Footer() {
             </p>
             <ul className="mt-6 space-y-4">
               <li>
-                <a
-                  href="#"
-                  className="text-base text-black hover:text-blue-600"
+                <Link
+                  to="/faqs"
+                  className="text-base text-black hover:text-[#006D5B]"
                 >
-                  Customer Support
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-base text-black hover:text-blue-600"
-                >
-                  Delivery Details
-                </a>
+                  FAQs
+                </Link>
               </li>
               <li>
                 <Link
-                  to="/terms"
-                  className="text-base text-black hover:text-blue-600"
+                  to="/special-offers"
+                  className="text-base text-black hover:text-[#006D5B]"
+                >
+                  Special Offers
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/terms-and-conditions"
+                  className="text-base text-black hover:text-[#006D5B]"
                 >
                   Terms & Conditions
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/privacy"
-                  className="text-base text-black hover:text-blue-600"
+                  to="/privacy-policy"
+                  className="text-base text-black hover:text-[#006D5B]"
                 >
                   Privacy Policy
                 </Link>
@@ -169,7 +169,7 @@ export default function Footer() {
               <Button
                 type="submit"
                 text="Subscribe"
-                className="inline-flex items-center justify-center ml-1 px-6 py-4 mt-3 font-semibold ring-1 ring-offset-1 ring-[#5c3d2e] text-[#5c3d2e]"
+                className="inline-flex items-center justify-center ml-1 px-6 py-4 mt-6 font-semibold ring-1 ring-offset-1 ring-[#5c3d2e] text-[#5c3d2e]"
               />
             </form>
           </div>
@@ -177,13 +177,27 @@ export default function Footer() {
 
         <hr className="mt-16 mb-10 border-[#5c3d2e]" />
 
-        <div className="flex justify-around items-center max-sm:flex-col max-sm:w-[300px] max-sm:gap-4 sm:gap-14 md:gap-32 lg:gap-54 xl:gap-158 pt-8">
-          <p className="max-sm:text-lg">
+        <div className="flex justify-around items-center max-sm:flex-col max-sm:w-full max-sm:gap-4 sm:gap-14 md:gap-32 lg:gap-54 xl:gap-158 pt-8">
+          <p className="max-sm:text-lg max-sm:text-center">
             © Copyright 2021, All Rights Reserved.
           </p>
           <ul className="flex justify-center max-sm:justify-around max-sm:mt-10 max-sm:w-[300px] items-center sm:gap-4 gap-8">
-            <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
+            <li>
+              <Link
+                to="/terms-and-conditions"
+                className="text-base text-black hover:text-[#006D5B]"
+              >
+                Terms & Conditions
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/privacy-policy"
+                className="text-base text-black hover:text-[#006D5B]"
+              >
+                Privacy Policy
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

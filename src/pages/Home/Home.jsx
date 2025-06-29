@@ -12,6 +12,10 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Drive Lanka | Home";
+  }, [isLoading]);
+
+  useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
     }, 500);

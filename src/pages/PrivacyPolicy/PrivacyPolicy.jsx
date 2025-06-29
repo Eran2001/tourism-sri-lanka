@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 
-const SpecialOffers = () => {
+const PrivacyPolicy = () => {
   useEffect(() => {
-    document.title = "Drive Lanka | Special Offers";
+    document.title = "Drive Lanka | Privacy Policy";
   }, []);
   return (
     <div className="h-screen flex justify-center items-center text-8xl">
-      Special Offers
+      Our Privacy Policy
     </div>
   );
 };
 
-export default SpecialOffers;
+export default PrivacyPolicy;

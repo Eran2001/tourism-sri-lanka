@@ -134,6 +134,7 @@ export default function Blogs() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Drive Lanka | Our Blog";
     const timeout = setTimeout(() => {
       setIsLoading(false);
     }, 200);

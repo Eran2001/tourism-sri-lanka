@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "@/components/ui/Button";
 import OurTeam from "../Home/OurTeam";
 
 const About = () => {
+  useEffect(() => {
+    document.title = "Drive Lanka | About Us";
+  }, []);
+
   return (
     <>
       <div className="py-10 px-4 sm:px-6 lg:px-8 bg-white text-[#5c3d2e] mt-27">

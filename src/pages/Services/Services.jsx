@@ -5,6 +5,7 @@ const Services = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Drive Lanka | Services";
     const timeout = setTimeout(() => {
       setIsLoading(false);
     }, 500);

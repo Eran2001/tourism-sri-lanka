@@ -22,6 +22,8 @@ const RentWithDriver = lazy(() =>
 );
 const SelfDrive = lazy(() => import("@/pages/SelfDrive/SelfDrive"));
 const SpecialOffers = lazy(() => import("@/pages/SpecialOffers/SpecialOffers"));
+const Terms = lazy(() => import("@/pages/Terms/Terms"));
+const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy/PrivacyPolicy"));
 
 export const router = createBrowserRouter([
   {
@@ -43,6 +45,8 @@ export const router = createBrowserRouter([
       { path: "with-driver", element: <RentWithDriver /> },
       { path: "self-drive", element: <SelfDrive /> },
       { path: "special-offers", element: <SpecialOffers /> },
+      { path: "terms-and-conditions", element: <Terms /> },
+      { path: "privacy-policy", element: <PrivacyPolicy /> },
 
       { path: "destinations", element: <Destinations /> },
       { path: "get-started", element: <GetStarted /> },

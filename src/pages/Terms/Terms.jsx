@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 
-const SpecialOffers = () => {
+const Terms = () => {
   useEffect(() => {
-    document.title = "Drive Lanka | Special Offers";
+    document.title = "Drive Lanka | Terms & Conditions";
   }, []);
   return (
     <div className="h-screen flex justify-center items-center text-8xl">
-      Special Offers
+      Our Terms & Conditions
     </div>
   );
 };
 
-export default SpecialOffers;
+export default Terms;
