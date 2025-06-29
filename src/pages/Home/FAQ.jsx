@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FAQ = () => {
   return (
@@ -145,12 +146,12 @@ const FAQ = () => {
 
         <p className="text-center text-gray-600 textbase mt-9">
           Didn’t find the answer you’re looking for?{" "}
-          <a
-            href="#"
+          <Link
+            to="faqs"
             className="font-medium text-[#006D5B] transition-all duration-200 hover:text- focus:text- hover:cursor-pointer"
           >
-            Contact our support
-          </a>
+            Take a look at our FQAs
+          </Link>
         </p>
       </div>
     </section>
