@@ -92,48 +92,48 @@ const SecondaryNavBar = () => {
           >
             Services
           </Link>
-          <a
-            href="#gallery1"
+          <Link
+            to="tour-itineraries"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
             Tour Itineraries
-          </a>
-          <a
-            href="#gallery2"
+          </Link>
+          <Link
+            to="hire-vehicles"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
             Hire Vehicles
-          </a>
-          <a
-            href="#gallery3"
+          </Link>
+          <Link
+            to="day-tours"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
             Day Tours
-          </a>
-          <a
-            href="#gallery4"
+          </Link>
+          <Link
+            to="best-things-to-do-in-sri-lanka"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
             Best things to do in Sri Lanka
-          </a>
-          <a
-            href="#gallery5"
+          </Link>
+          <Link
+            to="attractions"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
             Attractions
-          </a>
-          <a
-            href="#gallery6"
+          </Link>
+          <Link
+            to="recommended-stays"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
             Recommended Stays
-          </a>
+          </Link>
         </div>
       </Drawer>
     </>
