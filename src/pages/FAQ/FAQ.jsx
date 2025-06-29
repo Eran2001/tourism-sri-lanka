@@ -1,11 +1,11 @@
 import React from "react";
 
-const AirportTransfer = () => {
+const FAQ = () => {
   return (
     <div className="h-screen flex justify-center items-center text-8xl">
-      Airport Transfer
+      FAQ
     </div>
   );
 };
 
-export default AirportTransfer;
+export default FAQ;

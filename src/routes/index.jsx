@@ -14,11 +14,9 @@ const Clients = lazy(() => import("@/pages/CLients/CLients"));
 const Payments = lazy(() => import("@/pages/Payments/Payments"));
 const Blogs = lazy(() => import("@/pages/Blogs/Blogs"));
 const Services = lazy(() => import("@/pages/Services/Services"));
-const TourInit = lazy(() => import("@/pages/Tour-Init/TourInit"));
+const OurFleet = lazy(() => import("@/pages/OurFleet/OurFleet"));
 const HireVehicles = lazy(() => import("@/pages/Hire-Vehicles/HireVehicles"));
-const AirportTransfer = lazy(() =>
-  import("@/pages/AirportTransfer/AirportTransfer")
-);
+const FAQ = lazy(() => import("@/pages/FAQ/FAQ"));
 const RentWithDriver = lazy(() =>
   import("@/pages/RentWithDriver/RentWithDriver")
 );
@@ -39,9 +37,9 @@ export const router = createBrowserRouter([
       { path: "contact", element: <Contact /> },
       { path: "about", element: <About /> },
       { path: "services", element: <Services /> },
-      { path: "tour-itineraries", element: <TourInit /> },
+      { path: "fleet", element: <OurFleet /> },
       { path: "hire-vehicles", element: <HireVehicles /> },
-      { path: "airport-transfer", element: <AirportTransfer /> },
+      { path: "faqs", element: <FAQ /> },
       { path: "with-driver", element: <RentWithDriver /> },
       { path: "self-drive", element: <SelfDrive /> },
       { path: "special-offers", element: <SpecialOffers /> },

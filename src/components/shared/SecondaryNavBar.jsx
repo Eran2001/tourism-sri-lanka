@@ -15,20 +15,21 @@ const SecondaryNavBar = () => {
 
         {/* Desktop Links */}
         <ul className="flex max-xl:hidden gap-4">
-          <Link to="tour-itineraries" className="text-[#5c3d2e]">
-            Tour Itineraries
+          <Link to="fleet" className="text-[#5c3d2e]">
+            Our Fleet
           </Link>
           <Link to="hire-vehicles" className="text-[#5c3d2e]">
             Hire Vehicles
           </Link>
-          <Link to="airport-transfer" className="text-[#5c3d2e]">
-            Airport Transfer
-          </Link>
+
           <Link to="with-driver" className="text-[#5c3d2e]">
             Rent with Driver
           </Link>
           <Link to="self-drive" className="text-[#5c3d2e]">
             Self Drive
+          </Link>
+          <Link to="faqs" className="text-[#5c3d2e]">
+            FAQs
           </Link>
           <Link to="special-offers" className="text-[#5c3d2e]">
             Special Offers
@@ -60,6 +61,13 @@ const SecondaryNavBar = () => {
             Home
           </Link>
           <Link
+            to="/services"
+            className="border-b pb-2"
+            onClick={() => setIsDrawerOpen(false)}
+          >
+            Services
+          </Link>
+          <Link
             to="/clients"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
@@ -67,18 +75,11 @@ const SecondaryNavBar = () => {
             Clients
           </Link>
           <Link
-            to="/payments"
+            to="/blogs"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
-            Payments
-          </Link>
-          <Link
-            to="/contact"
-            className="border-b pb-2"
-            onClick={() => setIsDrawerOpen(false)}
-          >
-            Contact Us
+            Our Blog
           </Link>
           <Link
             to="/about"
@@ -88,18 +89,19 @@ const SecondaryNavBar = () => {
             About Us
           </Link>
           <Link
-            to="/services"
+            to="/contact"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
-            Services
+            Contact Us
           </Link>
+
           <Link
-            to="tour-itineraries"
+            to="fleet"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
-            Tour Itineraries
+            Our Fleet
           </Link>
           <Link
             to="hire-vehicles"
@@ -109,32 +111,32 @@ const SecondaryNavBar = () => {
             Hire Vehicles
           </Link>
           <Link
-            to="day-tours"
+            to="with-driver"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
-            Day Tours
+            Rent with Driver
           </Link>
           <Link
-            to="best-things-to-do-in-sri-lanka"
+            to="self-drive"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
-            Best things to do in Sri Lanka
+            Self Drive
           </Link>
           <Link
-            to="attractions"
+            to="faqs"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
-            Attractions
+            FAQs
           </Link>
           <Link
-            to="recommended-stays"
+            to="special-offers"
             className="border-b pb-2"
             onClick={() => setIsDrawerOpen(false)}
           >
-            Recommended Stays
+            Special Offers
           </Link>
         </div>
       </Drawer>

@@ -1,11 +1,11 @@
 import React from "react";
 
-const TourInit = () => {
+const OurFleet = () => {
   return (
     <div className="h-screen flex justify-center items-center text-8xl">
-      TourInit
+      Our Fleet
     </div>
   );
 };
 
-export default TourInit;
+export default OurFleet;

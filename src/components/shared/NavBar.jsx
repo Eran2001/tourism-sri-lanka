@@ -54,7 +54,7 @@ const NavBar = () => {
           <Link to="/blogs">Our BLog</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact Us</Link>
-          <Link to="/payments">Payments</Link>
+          {/* <Link to="/payments">Payments</Link> */}
         </div>
 
         {/* Mobile Hamburger Icon */}
@@ -76,20 +76,20 @@ const NavBar = () => {
             <Link to="/" onClick={() => setIsDrawerOpen(false)}>
               Home
             </Link>
+            <Link to="/services" onClick={() => setIsDrawerOpen(false)}>
+              Services
+            </Link>
             <Link to="/clients" onClick={() => setIsDrawerOpen(false)}>
               Clients
             </Link>
-            <Link to="/payments" onClick={() => setIsDrawerOpen(false)}>
-              Payments
-            </Link>
-            <Link to="/contact" onClick={() => setIsDrawerOpen(false)}>
-              Contact Us
+            <Link to="/blogs" onClick={() => setIsDrawerOpen(false)}>
+              Our Blog
             </Link>
             <Link to="/about" onClick={() => setIsDrawerOpen(false)}>
               About Us
             </Link>
-            <Link to="/services" onClick={() => setIsDrawerOpen(false)}>
-              Services
+            <Link to="/contact" onClick={() => setIsDrawerOpen(false)}>
+              Contact Us
             </Link>
           </div>
         </Drawer>
