@@ -7,7 +7,9 @@ const About = () => {
     <>
       <div className="py-10 px-4 sm:px-6 lg:px-8 bg-white text-[#5c3d2e] mt-27">
         <div className="max-w-4xl mx-auto mt-10">
-          <h1 className="text-4xl font-bold mb-6 text-center">About Us</h1>
+          <h1 className="text-3xl font-bold text-[#5c3d2e] sm:text-4xl mb-6 text-center">
+            About Us
+          </h1>
 
           <p className="text-lg leading-relaxed mb-4">
             At <span className="font-semibold">Visit In Lanka Car Rentals</span>

@@ -32,12 +32,12 @@ const NavBar = () => {
             <li className="flex items-center space-x-2 max-sm:hidden">
               <FaPhone className="w-4 h-4" />
               <span className="text-sm">
-                Talk to a specialist : +94 (77) 846 1010
+                Contact our support team : +94 (77) 123 4567
               </span>
             </li>
             <li className="flex items-center space-x-2 ">
               <IoMail className="w-4 h-4 " />
-              <span className="text-sm">info@visitinlanka.com</span>
+              <span className="text-sm">info@drivelanka.com</span>
             </li>
             <li>
               <FaFacebookF className="w-4 h-4" />

@@ -17,7 +17,7 @@ const Services = () => {
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 text-[#5c3d2e] mt-27">
       <div className="max-w-7xl mx-auto mt-10">
         {/* Section Header */}
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl font-bold text-[#5c3d2e] sm:text-4xl text-center mb-12">
           Our Vehicle Categories
         </h2>
 

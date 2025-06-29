@@ -9,7 +9,9 @@ const SecondaryNavBar = () => {
   return (
     <>
       <nav className="w-full fixed z-[10000] top-8 bg-[#f4d35e] flex justify-between items-center px-6 py-6">
-        <h1 className="text-[#5c3d2e] font-bold text-xl">TOUR</h1>
+        <Link to="/" className="text-[#5c3d2e] font-bold text-xl">
+          Drive Lanka
+        </Link>
 
         {/* Desktop Links */}
         <ul className="hidden lg:flex gap-4">

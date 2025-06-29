@@ -37,10 +37,10 @@ const Contact = () => {
       <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-[#5c3d2e] sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-bold text-[#5c3d2e] sm:text-4xl ">
             Connect with Us
           </h2>
-          <p className="mt-4 text-lg text-[#5c3d2e]">
+          <p className="mt-4 text-base text-[#5c3d2e]">
             We’d love to hear from you. Contact us through WhatsApp or email us
             using the form below.
           </p>

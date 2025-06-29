@@ -148,10 +148,10 @@ export default function Blogs() {
       <section className="py-12 bg-white sm:py-16 lg:py-20 mt-27">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="max-w-md mx-auto text-center">
-            <h2 className="text-3xl font-bold text-[#5c3d2e] sm:text-4xl font-pj">
+            <h2 className="text-3xl font-bold text-[#5c3d2e] sm:text-4xl ">
               Read our blog
             </h2>
-            <p className="mt-5 font-normal text-[#5c3d2e] font-pj">
+            <p className=" mt-4 text-base text-[#5c3d2e]">
               With lots of unique blocks, you can easily build a page without
               coding. Build your next landing page.
             </p>

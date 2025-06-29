@@ -17,10 +17,10 @@ const Payments = () => {
     <section className="py-10 bg-white sm:py-16 lg:py-24 h-screen mt-27">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-[#5c3d2e] lg:text-5xl sm:text-5xl">
+          <h2 className="text-3xl font-bold text-[#5c3d2e] sm:text-4xl ">
             Pricing &amp; Plans
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-[#5c3d2e]">
+          <p className=" mt-4 text-base text-[#5c3d2e]">
             Amet minim mollit non deserunt ullam co est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit.
           </p>
