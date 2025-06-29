@@ -1,7 +1,11 @@
 import React from "react";
 
 const Recommended = () => {
-  return <div className="h-screen bg-gray-400">Recommended Stays</div>;
+  return (
+    <div className="h-screen flex justify-center items-center text-8xl">
+      Recommended Stays
+    </div>
+  );
 };
 
 export default Recommended;

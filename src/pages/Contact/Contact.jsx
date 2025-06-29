@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import Loading from "@/components/ui/Loading";
 import emailjs from "@emailjs/browser";
 import Button from "../../components/ui/Button";
 import Notification from "../../components/ui/Notification";
@@ -18,6 +19,18 @@ const Contact = () => {
       .Notification.success("✅We got your message, we'll connect with you!")
       .Notification.error((err) => console.error(err));
   };
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 200);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (isLoading) return <Loading />;
 
   return (
     <section className="py-16 bg-gray-50 sm:py-20 lg:py-24 mt-20">
