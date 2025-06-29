@@ -5,7 +5,7 @@ import Icon from "../ui/Icon";
 
 export default function Footer() {
   return (
-    <section className="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
+    <section className="py-10 bg-[#f4d35e] sm:pt-16 lg:pt-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         {/* Top Section: Your original text + Button */}
         <div className="max-w-[800px] mx-auto text-center mb-10">
@@ -17,7 +17,7 @@ export default function Footer() {
             <Button
               text="Get Started"
               onClick={() => Notification.success("Hello")}
-              className="px-8 py-4 max-sm:px-6 max-sm:py-2"
+              className="px-8 py-4 max-sm:px-6 max-sm:py-2 bg-[#f9f5e3] ring-2 ring-offset-2 ring-[#5c3d2e]"
             />
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function Footer() {
 
           {/* Company links */}
           <div>
-            <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
+            <p className="text-sm font-semibold tracking-widest text-[#f9f5e3] uppercase">
               Company
             </p>
             <ul className="mt-6 space-y-4">
@@ -114,7 +114,7 @@ export default function Footer() {
 
           {/* Help links */}
           <div>
-            <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
+            <p className="text-sm font-semibold tracking-widest text-[#f9f5e3] uppercase">
               Help
             </p>
             <ul className="mt-6 space-y-4">
@@ -155,7 +155,7 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div className="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
-            <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
+            <p className="text-sm font-semibold tracking-widest text-[#f9f5e3] uppercase">
               Subscribe to newsletter
             </p>
             <form action="#" method="POST" className="mt-6">
@@ -166,17 +166,16 @@ export default function Footer() {
                 placeholder="Enter your email"
                 className="block w-full p-4 text-black placeholder-gray-500 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
               />
-              <button
+              <Button
                 type="submit"
-                className="inline-flex items-center justify-center px-6 py-4 mt-3 font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700"
-              >
-                Subscribe
-              </button>
+                text="Subscribe"
+                className="inline-flex items-center justify-center ml-1 px-6 py-4 mt-3 font-semibold ring-1 ring-offset-1 ring-[#5c3d2e] text-[#5c3d2e]"
+              />
             </form>
           </div>
         </div>
 
-        <hr className="mt-16 mb-10 border-gray-200" />
+        <hr className="mt-16 mb-10 border-[#5c3d2e]" />
 
         <div className="flex justify-around items-center max-sm:flex-col max-sm:w-[300px] max-sm:gap-4 sm:gap-14 md:gap-32 lg:gap-54 xl:gap-158 pt-8">
           <p className="max-sm:text-lg">
