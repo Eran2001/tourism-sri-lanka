@@ -5,24 +5,37 @@ import Icon from "../ui/Icon";
 
 export default function Footer() {
   return (
-    <section className="py-10 bg-[#f9f5e3] sm:pt-16 lg:pt-24">
+    <section className="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        {/* Top Section: Your original text + Button */}
+        <div className="max-w-[800px] mx-auto text-center mb-10">
+          <h5 className="text-[#5c3d2e] leading-none text-[3rem] max-sm:text-[2rem]">
+            Drop us a line or two, we are open for creative minds and
+            collaborations!
+          </h5>
+          <div className="mt-6">
+            <Button
+              text="Get Started"
+              onClick={() => Notification.success("Hello")}
+              className="px-8 py-4 max-sm:px-6 max-sm:py-2"
+            />
+          </div>
+        </div>
+
         <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
-          {/* Brand and Description */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-            <h2 className="text-[#5c3d2e] text-xl font-semibold">Tour</h2>
-            <p className="text-base leading-relaxed text-gray-600 mt-4">
-              Drop us a line or two, we are open for creative minds and
-              collaborations!
+            <img
+              className="w-auto h-9"
+              src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg"
+              alt="Logo"
+            />
+            <p className="text-base leading-relaxed text-gray-600 mt-7">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
             </p>
-            <div className="mt-6">
-              <Button
-                text="Get Started"
-                onClick={() => Notification.success("Hello")}
-                className="px-6 py-3"
-              />
-            </div>
-            <ul className="flex items-center space-x-3 mt-6">
+
+            <ul className="flex items-center space-x-3 mt-9">
+              {/* Social icons here, same as before */}
               <li>
                 <Icon
                   icon="facebook"
@@ -58,7 +71,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company Links */}
+          {/* Company links */}
           <div>
             <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
               Company
@@ -99,7 +112,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Help Links */}
+          {/* Help links */}
           <div>
             <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
               Help
@@ -165,17 +178,13 @@ export default function Footer() {
 
         <hr className="mt-16 mb-10 border-gray-200" />
 
-        <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:justify-between">
-          <p className="text-sm text-gray-600">
+        <div className="flex justify-around items-center max-sm:flex-col max-sm:w-[300px] max-sm:gap-4 sm:gap-14 md:gap-32 lg:gap-54 xl:gap-158 pt-8">
+          <p className="max-sm:text-lg">
             © Copyright 2021, All Rights Reserved.
           </p>
-          <ul className="flex gap-4 text-sm text-gray-600">
-            <li>
-              <Link to="/privacy">Privacy Policy</Link>
-            </li>
-            <li>
-              <Link to="/terms">Terms & Conditions</Link>
-            </li>
+          <ul className="flex justify-center max-sm:justify-around max-sm:mt-10 max-sm:w-[300px] items-center sm:gap-4 gap-8">
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
           </ul>
         </div>
       </div>
