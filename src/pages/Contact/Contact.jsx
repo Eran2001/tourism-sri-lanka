@@ -66,9 +66,9 @@ const Contact = () => {
           <h2 className="text-3xl font-semibold text-[#5c3d2e] text-center mb-12">
             Instant Support via WhatsApp
           </h2>
-          <div className="flex flex-col md:flex-row gap-8 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 items-start w-full">
             {/* Left Side: Cards */}
-            <div className="flex-1 space-y-8">
+            <div className="w-full lg:w-1/2 space-y-8">
               <div className="bg-white p-6 rounded-lg shadow-lg text-center">
                 <h3 className="text-xl font-bold text-[#5c3d2e] mb-4">
                   Quick Assistance
@@ -84,7 +84,7 @@ const Contact = () => {
                 >
                   <Button
                     text="Message"
-                    className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-4"
+                    className="px-8 py-4 sm:px-10 sm:py-4 mt-4"
                   />
                 </a>
               </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                 >
                   <Button
                     text="Chat Now"
-                    className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-4"
+                    className="px-8 py-4 sm:px-10 sm:py-4 mt-4"
                   />
                 </a>
               </div>
@@ -122,26 +122,45 @@ const Contact = () => {
                 >
                   <Button
                     text="Contact Us"
-                    className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-4"
+                    className="px-8 py-4 sm:px-10 sm:py-4 mt-4"
                   />
                 </a>
               </div>
             </div>
+
             {/* Right Side: QR Code */}
-            <div className="flex-1 flex justify-end items-center">
-              <div className="bg-white p-24 rounded-lg shadow-lg flex flex-col items-center">
-                <h3 className="text-xl font-bold text-[#5c3d2e] mb-4 text-center">
+            {/* Right Side: QR Code */}
+            <div className="w-full lg:w-1/2 flex justify-center items-center">
+              <div className="bg-white p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 rounded-lg shadow-lg text-center w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#5c3d2e] mb-6">
                   Scan to Chat
                 </h3>
-                <QRCodeSVG
-                  value="https://wa.me/94778674519"
-                  size={400}
-                  bgColor="#ffffff"
-                  fgColor="#5c3d2e"
-                  level="Q"
-                  className="mx-auto"
-                />
-                <p className="text-gray-600 mt-4 text-center max-w-md">
+
+                {/* Small QR for small screens */}
+                <div className="block md:hidden">
+                  <QRCodeSVG
+                    value="https://wa.me/94778674519"
+                    size={200}
+                    bgColor="#ffffff"
+                    fgColor="#5c3d2e"
+                    level="Q"
+                    className="mx-auto"
+                  />
+                </div>
+
+                {/* Large QR for md and up */}
+                <div className="hidden md:block">
+                  <QRCodeSVG
+                    value="https://wa.me/94778674519"
+                    size={320}
+                    bgColor="#ffffff"
+                    fgColor="#5c3d2e"
+                    level="Q"
+                    className="mx-auto"
+                  />
+                </div>
+
+                <p className="text-gray-600 mt-6 text-center text-base md:text-lg max-w-xl mx-auto">
                   Scan the QR code to message us on WhatsApp instantly.
                 </p>
               </div>
