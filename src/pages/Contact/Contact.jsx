@@ -78,7 +78,7 @@ const Contact = () => {
                   inquiries.
                 </p>
                 <a
-                  href="https://wa.me/94778674519"
+                  href="https://wa.me/94777900734"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -97,7 +97,7 @@ const Contact = () => {
                   your travel plans go smoothly.
                 </p>
                 <a
-                  href="https://wa.me/94778674519"
+                  href="https://wa.me/94777900734"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -116,7 +116,7 @@ const Contact = () => {
                   WhatsApp.
                 </p>
                 <a
-                  href="https://wa.me/94778674519"
+                  href="https://wa.me/94777900734"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -138,7 +138,7 @@ const Contact = () => {
                 {/* Small QR for small screens */}
                 <div className="block md:hidden">
                   <QRCodeSVG
-                    value="https://wa.me/94778674519"
+                    value="https://wa.me/94777900734"
                     size={200}
                     bgColor="#ffffff"
                     fgColor="#5c3d2e"
@@ -150,7 +150,7 @@ const Contact = () => {
                 {/* Large QR for md and up */}
                 <div className="hidden md:block">
                   <QRCodeSVG
-                    value="https://wa.me/94778674519"
+                    value="https://wa.me/94777900734"
                     size={320}
                     bgColor="#ffffff"
                     fgColor="#5c3d2e"
