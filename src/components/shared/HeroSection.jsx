@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaCar } from "react-icons/fa";
 
@@ -6,6 +6,23 @@ import Button from "@/components/ui/Button";
 
 const HeroSection = () => {
   const navigate = useNavigate();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const carImages = [
+    "https://pngimg.com/uploads/toyota/toyota_PNG1922.png",
+    "https://pngimg.com/uploads/audi/audi_PNG99491.png",
+  ];
+
+  // Automatic slideshow effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === carImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [carImages.length]);
 
   return (
     <div className="relative h-[200vh] w-full">
@@ -36,18 +53,18 @@ const HeroSection = () => {
             {/* Car Image - Right Side */}
             <div
               className="
-    h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[500px] overflow-hidden 
-    w-1/2 absolute right-0 top-1/2 -translate-y-1/2
-    max-md:static max-md:w-full max-md:translate-y-0 max-md:justify-center max-md:items-center max-md:hidden
-  "
+                h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[500px] overflow-hidden 
+                w-1/2 absolute right-0 top-1/2 -translate-y-1/2
+                max-md:static max-md:w-full max-md:translate-y-0 max-md:justify-center max-md:items-center max-md:hidden
+              "
             >
               <img
-                src="https://pngimg.com/uploads/toyota/toyota_PNG1922.png"
-                alt="Luxury Car"
+                src={carImages[currentImageIndex]}
+                alt={`Car ${currentImageIndex + 1}`}
                 className="
-      w-full h-full object-cover 
-      max-md:w-[250px] max-md:h-auto max-md:object-contain
-    "
+                  w-full h-full object-cover 
+                  max-md:w-[250px] max-md:h-auto max-md:object-contain
+                "
                 style={{ clipPath: "inset(0 0 5% 0)" }}
               />
             </div>
