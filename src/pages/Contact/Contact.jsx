@@ -129,7 +129,6 @@ const Contact = () => {
             </div>
 
             {/* Right Side: QR Code */}
-            {/* Right Side: QR Code */}
             <div className="w-full lg:w-1/2 flex justify-center items-center">
               <div className="bg-white p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 rounded-lg shadow-lg text-center w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                 <h3 className="text-2xl md:text-3xl font-bold text-[#5c3d2e] mb-6">
