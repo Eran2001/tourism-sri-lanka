@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 import emailjs from "@emailjs/browser";
-
+import { QRCodeSVG } from "qrcode.react";
 import Button from "@/components/ui/Button";
 import Notification from "@/components/ui/Notification";
 import Loading from "@/components/ui/Loading";
@@ -12,24 +11,27 @@ const Contact = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
 
+  // Initialize EmailJS with your Public Key
+  useEffect(() => {
+    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS Public Key
+  }, []);
+
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
         form.current,
-        "YOUR_PUBLIC_KEY"
+        "YOUR_PUBLIC_KEY" // Replace with your EmailJS Public Key
       )
       .then(
         () => {
-          Notification.success(
-            "✅ We got your message, we'll connect with you!"
-          );
+          Notification.success("We got your message, we'll connect with you!");
           form.current.reset();
         },
         (err) => {
-          Notification.error("❌ Failed to send message. Please try again.");
+          Notification.error("Failed to send message. Please try again.");
           console.error(err);
         }
       );
@@ -49,17 +51,6 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-100 pt-24 pb-1 mt-27">
       <div className="container mx-auto px-4">
-        {/* Introduction */}
-        {/* <section className="text-center py-16 bg-[#f4d35e] rounded-lg">
-          <h1 className="text-5xl font-bold text-[#5c3d2e] mb-4">
-            Connect with Drive Lanka
-          </h1>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            We’re here to help you plan your perfect journey. Reach out via
-            WhatsApp or email, and our team will get back to you promptly.
-          </p>
-        </section> */}
-
         <section className="text-center py-16 bg-[#f4d35e] rounded-lg">
           <h2 className="text-3xl font-semibold text-[#5c3d2e] mb-4">
             Connect with Drive Lanka
@@ -75,93 +66,91 @@ const Contact = () => {
           <h2 className="text-3xl font-semibold text-[#5c3d2e] text-center mb-12">
             Instant Support via WhatsApp
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-xl font-bold text-[#5c3d2e] mb-4">
-                Quick Assistance
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Message us anytime for immediate help with bookings or
-                inquiries.
-              </p>
-              {/* <a
-                href="https://wa.me/94771234567"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#f4d35e] text-[#5c3d2e] font-bold py-2 px-4 rounded-full hover:bg-[#e0c250] transition"
-              >
-                Message on WhatsApp
-              </a> */}
-              <a
-                href="https://wa.me/94771234567"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  text="Message"
-                  className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-4"
-                />
-              </a>
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            {/* Left Side: Cards */}
+            <div className="flex-1 space-y-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h3 className="text-xl font-bold text-[#5c3d2e] mb-4">
+                  Quick Assistance
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Message us anytime for immediate help with bookings or
+                  inquiries.
+                </p>
+                <a
+                  href="https://wa.me/94778674519"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    text="Message"
+                    className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-4"
+                  />
+                </a>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h3 className="text-xl font-bold text-[#5c3d2e] mb-4">
+                  24/7 Availability
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Our team is always ready to assist, day or night, to ensure
+                  your travel plans go smoothly.
+                </p>
+                <a
+                  href="https://wa.me/94778674519"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    text="Chat Now"
+                    className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-4"
+                  />
+                </a>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h3 className="text-xl font-bold text-[#5c3d2e] mb-4">
+                  Personalized Support
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Get tailored advice for your travel needs directly through
+                  WhatsApp.
+                </p>
+                <a
+                  href="https://wa.me/94778674519"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    text="Contact Us"
+                    className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-4"
+                  />
+                </a>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-xl font-bold text-[#5c3d2e] mb-4">
-                24/7 Availability
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Our team is always ready to assist, day or night, to ensure your
-                travel plans go smoothly.
-              </p>
-              {/* <a
-                href="https://wa.me/94771234567"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#f4d35e] text-[#5c3d2e] font-bold py-2 px-4 rounded-full hover:bg-[#e0c250] transition"
-              >
-                Chat Now
-              </a> */}
-              <a
-                href="https://wa.me/94771234567"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  text="Chat Now"
-                  className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-4"
+            {/* Right Side: QR Code */}
+            <div className="flex-1 flex justify-end items-center">
+              <div className="bg-white p-24 rounded-lg shadow-lg flex flex-col items-center">
+                <h3 className="text-xl font-bold text-[#5c3d2e] mb-4 text-center">
+                  Scan to Chat
+                </h3>
+                <QRCodeSVG
+                  value="https://wa.me/94778674519"
+                  size={400}
+                  bgColor="#ffffff"
+                  fgColor="#5c3d2e"
+                  level="Q"
+                  className="mx-auto"
                 />
-              </a>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-xl font-bold text-[#5c3d2e] mb-4">
-                Personalized Support
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Get tailored advice for your travel needs directly through
-                WhatsApp.
-              </p>
-              {/* <a
-                href="https://wa.me/94771234567"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#f4d35e] text-[#5c3d2e] font-bold py-2 px-4 rounded-full hover:bg-[#e0c250] transition"
-              >
-                Contact Us
-              </a> */}
-              <a
-                href="https://wa.me/94771234567"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  text="Contact Us"
-                  className="px-8 py-4 max-sm:px-10 max-sm:py-4 mt-4"
-                />
-              </a>
+                <p className="text-gray-600 mt-4 text-center max-w-md">
+                  Scan the QR code to message us on WhatsApp instantly.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Email Form */}
-        <section className="py-16 bg-[#5c3d2e] text-white rounded-lg">
+        <section className="py-16 bg-[#5c3d2e] px-16 text-white rounded-lg">
           <h2 className="text-3xl font-semibold text-center mb-12">
             Send Us an Email
           </h2>

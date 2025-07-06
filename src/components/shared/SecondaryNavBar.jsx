@@ -24,7 +24,7 @@ const SecondaryNavBar = () => {
 
         {/* Desktop Links */}
         <ul className="flex max-xl:hidden gap-4">
-          <NavLink
+          {/* <NavLink
             to="/fleet"
             className={({ isActive }) =>
               `px-3 py-2 rounded-md text-sm font-medium text-[#5c3d2e] transition-all duration-200 ${
@@ -35,7 +35,7 @@ const SecondaryNavBar = () => {
             }
           >
             Our Fleet
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/rent-vehicles"
             className={({ isActive }) =>
@@ -193,7 +193,7 @@ const SecondaryNavBar = () => {
           >
             Contact Us
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/fleet"
             onClick={() => setIsDrawerOpen(false)}
             className={({ isActive }) =>
@@ -205,7 +205,7 @@ const SecondaryNavBar = () => {
             }
           >
             Our Fleet
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/rent-vehicles"
             onClick={() => setIsDrawerOpen(false)}
